@@ -1,0 +1,23 @@
+def chatbot():
+    print("Hello! I'm your chatbot. Type 'bye' to end the conversation.")
+    
+    # Keep the conversation alive with a while-loop
+    while True:
+        # Get input from the user
+        user_input = input("You: ").lower()  # Convert input to lowercase for case-insensitive matching
+        
+        # Respond to 'hi' or any greeting
+        if "hi" in user_input or "hello" in user_input:
+            print("Chatbot: Hi there! How can I help you today?")
+        
+        # Respond to 'bye' to end the conversation
+        elif "bye" in user_input:
+            print("Chatbot: Goodbye! Have a nice day.")
+            break
+        
+        # Default response if no known input is detected
+        else:
+            print("Chatbot: I'm not sure how to respond to that. Can you try asking something else?")
+    
+# Start the chatbot function
+chatbot()
